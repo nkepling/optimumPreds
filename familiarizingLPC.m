@@ -6,6 +6,8 @@ x = filter(1,[1 1/2 1/3 1/4],noise);
 x = x(end-4096+1:end);
 
 [a ,g]= lpc(x,3);
+
+zplane(a,g)
 est_x = filter([0 -a(2:end)],1,x);
 
 figure()
