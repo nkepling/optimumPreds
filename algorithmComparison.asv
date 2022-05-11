@@ -42,7 +42,7 @@ legend('PSD estimate of x','PSD of model output')
 title("PSD Estimate of True AR signal vs PSD of Model Output")
 pxx = periodogram(x);
 est = 20*log10(2*abs(h1)/(2*pi));
-mse = norm(pxx(2:end)-est,2)^2/(length(pxx)-1);
+mse = norm(pxx(-est,2)^2/(length(pxx)-1);
 
 % hold off 
 % figure()
